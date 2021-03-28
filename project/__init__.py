@@ -3,7 +3,6 @@ from flask import Flask
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy_utils import create_database, database_exists
 
 
 ##########################DATABASE##################################
@@ -14,15 +13,12 @@ if not os.path.exists(file_path):
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:***REMOVED_PASSWORD***@localhost/putbox'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://farhaan:***REMOVED_PASSWORD***@localhost:5432/cmpe220'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 app.config['UPLOAD_FOLDER'] = file_path
 db = SQLAlchemy(app)
 Migrate(app, db)
-
-if not database_exists(app.config['SQLALCHEMY_DATABASE_URI']):
-    create_database(app.config['SQLALCHEMY_DATABASE_URI'])
 
 login_manager = LoginManager()
 login_manager.init_app(app)
