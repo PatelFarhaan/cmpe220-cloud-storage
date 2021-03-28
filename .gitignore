@@ -4,3 +4,5 @@ __pycache__
 migrations
 lambda/node_modules*
 .idea*
+.DS_Store
+tmp/
