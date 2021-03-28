@@ -37,8 +37,8 @@ class Storage(db.Model):
     __tablename__ = 'storage'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
-    file = db.Column(db.String(1000))
-    updated_on = db.Column(db.DateTime, nullable=True)
+    file_url = db.Column(db.String(1000))
+    zip_file_url = db.Column(db.String(1000))
     filename = db.Column(db.String(1000), nullable=False, unique=True)
     file_desc = db.Column(db.String(1000), default='No description provided')
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
