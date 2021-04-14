@@ -38,7 +38,6 @@ class Storage(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
     file_url = db.Column(db.String(1000))
-    zip_file_url = db.Column(db.String(1000))
     filename = db.Column(db.String(1000), nullable=False, unique=True)
     file_desc = db.Column(db.String(1000), default='No description provided')
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
