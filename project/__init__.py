@@ -13,7 +13,11 @@ if not os.path.exists(file_path):
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
+<<<<<<< HEAD
 connection_string = "postgresql://farhaan:***REMOVED_PASSWORD***@database:5432/cmpe220"
+=======
+connection_string = "postgresql://farhaan:farhaan@database:5432/assessment"
+>>>>>>> 2d9e91c662a2c3229e116df38b6f965a83370760
 app.config['SQLALCHEMY_DATABASE_URI'] = connection_string
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
