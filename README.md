@@ -1,5 +1,9 @@
-# Assessment
+# _**Assessment**_
 
+## Requirements before running this application:
+
+#### Make sure to place the AWS access and secret key in project/users/views.py file
+   
 ## How to Run this application:
 
 1. Create a virtual environment using the command: 
