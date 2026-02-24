@@ -6,3 +6,5 @@ lambda/node_modules*
 .idea*
 .DS_Store
 tmp/
+# Added by ggshield
+.cache_ggshield
